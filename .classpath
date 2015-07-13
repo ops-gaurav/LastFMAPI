@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="/Users/gaurav/Documents/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="/Users/gaurav/Downloads/jackson-annotations-2.0.0.jar"/>
+	<classpathentry kind="lib" path="/Users/gaurav/Downloads/jackson-core-2.0.0.jar"/>
+	<classpathentry kind="lib" path="/Users/gaurav/Downloads/jackson-databind-2.0.0.jar"/>
+	<classpathentry kind="lib" path="/Users/gaurav/Downloads/jackson-databind-2.5.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
