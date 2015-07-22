@@ -1,7 +1,5 @@
 package lastfm.types;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -12,10 +10,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Image {
 
-	@SerializedName("#text")
 	@JsonProperty("#text")
-	@Expose private String url;
-	@Expose private String size;
+	private String url;
+	private String size;
 	
 	public void setUrl(String url){
 		this.url = url;
