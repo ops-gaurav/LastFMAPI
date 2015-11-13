@@ -1,7 +1,7 @@
 package lastfm.album;
 
-import lastfm.album.info.LastFMAlbum;
-import lastfm.album.info.LastFMAlbumWrapper;
+import lastfm.album.info.Album;
+import lastfm.album.info.AlbumWrapper;
 import lastfm.util.FetchJSON;
 import lastfm.util.DeserializeObject;
 
@@ -39,12 +39,12 @@ public class AlbumInfo {
 	 * an album. It holds the album information represented in POJO
 	 * @return <code>lastfm.album.facades.Album</code> that holds the album info
 	 */
-	public LastFMAlbum getAlbumInfo(){
+	public Album getAlbumInfo(){
 		String jsonData = FetchJSON.fetchJSONFrom(genMethod);
 		if(jsonData != null){
 			
-			DeserializeObject<LastFMAlbumWrapper> wrapperDeserializer = new DeserializeObject<>();
-			LastFMAlbumWrapper wrapper = wrapperDeserializer.deserealize(jsonData, LastFMAlbumWrapper.class);
+			DeserializeObject<AlbumWrapper> wrapperDeserializer = new DeserializeObject<>();
+			AlbumWrapper wrapper = wrapperDeserializer.deserealize(jsonData, AlbumWrapper.class);
 			
 			return wrapper.getAlbum();
 		}

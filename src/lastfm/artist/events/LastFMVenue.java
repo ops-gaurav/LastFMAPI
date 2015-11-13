@@ -8,7 +8,7 @@ public class LastFMVenue {
 
 	@JsonProperty private int id;
 	@JsonProperty private String name;
-	@JsonProperty private LastFMLocation location;
+	@JsonProperty private Location location;
 	@JsonProperty private String url;
 	@JsonProperty private String website;
 	@JsonProperty private String phonenumber;
@@ -26,10 +26,10 @@ public class LastFMVenue {
 	public String getName(){
 		return name;
 	}
-	public void setLocation(LastFMLocation location){
+	public void setLocation(Location location){
 		this.location = location;
 	}
-	public LastFMLocation getLocation(){
+	public Location getLocation(){
 		return location;
 	}
 	public void settUrl(String url){

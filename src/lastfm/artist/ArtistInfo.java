@@ -1,7 +1,7 @@
 package lastfm.artist;
 
-import lastfm.artist.info.LastFMArtist;
-import lastfm.artist.info.LastFMArtistWrapper;
+import lastfm.artist.info.Artist;
+import lastfm.artist.info.ArtistWrapper;
 import lastfm.util.FetchJSON;
 import lastfm.util.DeserializeObject;
 
@@ -15,12 +15,12 @@ public class ArtistInfo {
 		genMethod += "&artist="+ artist;
 	}
 	
-	public LastFMArtist fetchArtistInfo(){
+	public Artist fetchArtistInfo(){
 		
 		String json = FetchJSON.fetchJSONFrom(genMethod);
 		if(json != null){
-			DeserializeObject<LastFMArtistWrapper> artistWrapper = new DeserializeObject<>();
-			LastFMArtistWrapper wrapper = artistWrapper.deserealize(json, LastFMArtistWrapper.class);
+			DeserializeObject<ArtistWrapper> artistWrapper = new DeserializeObject<>();
+			ArtistWrapper wrapper = artistWrapper.deserealize(json, ArtistWrapper.class);
 			return wrapper.getArtist();
 		}
 		return null;

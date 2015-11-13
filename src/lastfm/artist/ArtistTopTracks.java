@@ -1,7 +1,7 @@
 package lastfm.artist;
 
-import lastfm.artist.toptracks.LastFMTopTracksWrapper;
-import lastfm.artist.toptracks.LastFMTopTracks;
+import lastfm.artist.toptracks.TopTracksWrapper;
+import lastfm.artist.toptracks.TopTracks;
 import lastfm.util.DeserializeObject;
 import lastfm.util.FetchJSON;
 
@@ -31,13 +31,13 @@ public class ArtistTopTracks {
 	 * fetch the top tracks for the given artist
 	 * @return <code>lastfm.artist.toptracks.TopTracks</code> if tracks found
 	 */
-	public LastFMTopTracks fetchTopTracks(){
+	public TopTracks fetchTopTracks(){
 		genMethod += "&limit=" +count;
 		genMethod += "&page=" +page;
 		
 		String json = FetchJSON.fetchJSONFrom(genMethod);
-		DeserializeObject<LastFMTopTracksWrapper> deserializer = new DeserializeObject<>();
-		LastFMTopTracksWrapper tracksWrapper = deserializer.deserealize(json, LastFMTopTracksWrapper.class);
+		DeserializeObject<TopTracksWrapper> deserializer = new DeserializeObject<>();
+		TopTracksWrapper tracksWrapper = deserializer.deserealize(json, TopTracksWrapper.class);
 		
 			return tracksWrapper.getToptracks();
 	}

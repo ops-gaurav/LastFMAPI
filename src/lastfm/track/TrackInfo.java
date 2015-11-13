@@ -1,7 +1,7 @@
 package lastfm.track;
 
-import lastfm.track.info.LastFMTrackInfoWrapper;
-import lastfm.track.info.LastFMTrack;
+import lastfm.track.info.TrackInfoWrapper;
+import lastfm.track.info.Track;
 import lastfm.util.DeserializeObject;
 import lastfm.util.FetchJSON;
 
@@ -16,12 +16,12 @@ public class TrackInfo {
 		genMethod += "&track="+ track;
 	}
 	
-	public LastFMTrack fetchTrackInfo(){
+	public Track fetchTrackInfo(){
 		String json = FetchJSON.fetchJSONFrom(genMethod);
 		if(json != null){
 			
-			DeserializeObject<LastFMTrackInfoWrapper> deserialize = new DeserializeObject<>();
-			LastFMTrackInfoWrapper wrapper = deserialize.deserealize(json, LastFMTrackInfoWrapper.class);
+			DeserializeObject<TrackInfoWrapper> deserialize = new DeserializeObject<>();
+			TrackInfoWrapper wrapper = deserialize.deserealize(json, TrackInfoWrapper.class);
 			
 			return wrapper.getTrackInfo();
 			

@@ -2,8 +2,8 @@ package lastfm.artist;
 
 /*import java.io.IOException;*/
 
-import lastfm.artist.events.LastFMEvents;
-import lastfm.artist.events.LastFMEventsWrapper;
+import lastfm.artist.events.Events;
+import lastfm.artist.events.EventsWrapper;
 import lastfm.util.FetchJSON;
 import lastfm.util.DeserializeObject;
 
@@ -35,12 +35,12 @@ public class ArtistEvents {
 	 * call this method to get the provided artists events
 	 * @return <code>lastfm.events.facades.Events</code> if events found
 	 */
-	public LastFMEvents getArtistEvents(){
+	public Events getArtistEvents(){
 		String fetchJson = FetchJSON.fetchJSONFrom(genMethod);
 		if(fetchJson != null){
 			
-			DeserializeObject<LastFMEventsWrapper> deserializer = new DeserializeObject<>();
-			LastFMEventsWrapper eventsWrapper = deserializer.deserealize(fetchJson, LastFMEventsWrapper.class);
+			DeserializeObject<EventsWrapper> deserializer = new DeserializeObject<>();
+			EventsWrapper eventsWrapper = deserializer.deserealize(fetchJson, EventsWrapper.class);
 				return eventsWrapper.getEvents();
 			
 			/*ObjectMapper mapper = new ObjectMapper().enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
