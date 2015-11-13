@@ -29,6 +29,10 @@ public class ArtistEvents {
 		genMethod += EventsAPIMethods.ARTIST_EVENTS+"&format=json";
 		genMethod += "&api_key="+ apiKey;
 		genMethod += "&artist="+ artist;
+		
+		System.out.println(apiKey+ "\t"+ artist);;
+		
+		System.out.println(genMethod);
 	}
 	
 	/**
