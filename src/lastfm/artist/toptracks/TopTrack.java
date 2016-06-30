@@ -19,7 +19,7 @@ public class TopTrack {
 	@JsonProperty private long listeners;
 	@JsonProperty private String mbid;
 	@JsonProperty private String url;
-	@JsonProperty private Streamable streamable;
+	@JsonProperty private String streamable;
 	@JsonProperty private TopTracksArtist artist;
 	@JsonProperty private List<Image> image;
 	@JsonProperty("@attr") private RankAttr rankAttr;
@@ -84,15 +84,15 @@ public class TopTrack {
 	public String getUrl(){
 		return url;
 	}
-	public void setStreamable(Streamable streamable){
+	public void setStreamable(String streamable){
 		this.streamable = streamable;
 	}
 	/**
 	 * return the <code>lastfm.artist.topalbums.Streamable</code> POJO representing
 	 * the POJO Streaming properties
-	 * @return Streamable POJO
+	 * @return String value
 	 */
-	public Streamable getStreamable(){
+	public String getStreamable(){
 		return streamable;
 	}
 	public void setArtist(TopTracksArtist artist){

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author gaurav
  *
  */
+@Deprecated
 public class Streamable {
 
 	@JsonProperty("#text") private int isStreamable;
