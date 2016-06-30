@@ -12,6 +12,9 @@ public class FetchJSON {
 			url = url.replace(" ", "%20");
 			url += "&format=json";
 			URL address = new URL(url);
+			
+			System.out.println(url);
+			
 			URLConnection connection = address.openConnection();
 			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));

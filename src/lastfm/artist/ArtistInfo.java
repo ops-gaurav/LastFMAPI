@@ -4,18 +4,28 @@ import lastfm.artist.info.Artist;
 import lastfm.artist.info.ArtistWrapper;
 import lastfm.util.FetchJSON;
 import lastfm.util.DeserializeObject;
+import lastfm.apimethods.ArtistAPIMethods;
 
 public class ArtistInfo {
 
 	private String genMethod = "";
 	
-	public ArtistInfo(String apiKey, String artist){
-		genMethod += EventsAPIMethods.ARTIST_INFO;
+	/**
+	 * default constructor, must provide with the API key
+	 * @param apiKey
+	 */
+	public ArtistInfo(String apiKey){
+		genMethod += ArtistAPIMethods.ARTIST_INFO;
 		genMethod += "&api_key="+ apiKey;
-		genMethod += "&artist="+ artist;
 	}
 	
-	public Artist fetchArtistInfo(){
+	/**
+	 * fetch the artist info from this method
+	 * @param artist represents the name of the artist
+	 * @return
+	 */
+	public Artist fetchArtistInfo(String artist){
+		genMethod += "&artist="+ artist;
 		
 		String json = FetchJSON.fetchJSONFrom(genMethod);
 		if(json != null){
