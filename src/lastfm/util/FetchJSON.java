@@ -13,7 +13,7 @@ public class FetchJSON {
 			url += "&format=json";
 			URL address = new URL(url);
 			
-			System.out.println(url);
+			System.out.println("Fetching URL: "+ url);
 			
 			URLConnection connection = address.openConnection();
 			
