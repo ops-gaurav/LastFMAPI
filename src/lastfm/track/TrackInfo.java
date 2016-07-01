@@ -24,7 +24,7 @@ public class TrackInfo {
 		if(json != null){
 			
 			DeserializeObject<TrackInfoWrapper> deserialize = new DeserializeObject<>();
-			TrackInfoWrapper wrapper = deserialize.deserealize(json, TrackInfoWrapper.class);
+			TrackInfoWrapper wrapper = deserialize.deserialize(json, TrackInfoWrapper.class);
 			
 			return wrapper.getTrackInfo();
 			

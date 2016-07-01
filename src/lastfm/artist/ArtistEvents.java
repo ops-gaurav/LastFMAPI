@@ -46,7 +46,7 @@ public class ArtistEvents {
 		if(fetchJson != null){
 			
 			DeserializeObject<EventsWrapper> deserializer = new DeserializeObject<>();
-			EventsWrapper eventsWrapper = deserializer.deserealize(fetchJson, EventsWrapper.class);
+			EventsWrapper eventsWrapper = deserializer.deserialize(fetchJson, EventsWrapper.class);
 				return eventsWrapper.getEvents();
 		}
 		return null;

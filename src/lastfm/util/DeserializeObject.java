@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 public class DeserializeObject<T> {
 
-	public T deserealize(String json, Class<T> targetClass){
+	public T deserialize(String json, Class<T> targetClass){
 		ObjectMapper mapper = new ObjectMapper().enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
 		try {
 			T object = (T) mapper.readValue(json, targetClass);

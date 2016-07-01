@@ -1,8 +1,7 @@
 package lastfm.geo.tracks;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import lastfm.geo.ResultAttr;
+import lastfm.types.ResultAttr;
 
 import java.util.List;
 

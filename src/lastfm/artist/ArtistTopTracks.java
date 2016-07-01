@@ -38,7 +38,7 @@ public class ArtistTopTracks {
 		
 		String json = FetchJSON.fetchJSONFrom(genMethod);
 		DeserializeObject<TopTracksWrapper> deserializer = new DeserializeObject<>();
-		TopTracksWrapper tracksWrapper = deserializer.deserealize(json, TopTracksWrapper.class);
+		TopTracksWrapper tracksWrapper = deserializer.deserialize(json, TopTracksWrapper.class);
 		
 			return tracksWrapper.getToptracks();
 	}

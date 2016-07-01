@@ -36,7 +36,7 @@ public class LastFMGeoTopTracks {
 		if (json != null) {
 			
 			DeserializeObject<GeoTopTracksWrapper> deserializer = new DeserializeObject<>();
-			GeoTopTracksWrapper geoTracksWrapper = deserializer.deserealize(json, GeoTopTracksWrapper.class);
+			GeoTopTracksWrapper geoTracksWrapper = deserializer.deserialize(json, GeoTopTracksWrapper.class);
 			
 			return geoTracksWrapper.tracks;
 			

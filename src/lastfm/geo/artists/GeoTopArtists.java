@@ -2,7 +2,7 @@ package lastfm.geo.artists;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lastfm.geo.ResultAttr;
+import lastfm.types.ResultAttr;
 
 public class GeoTopArtists {
 

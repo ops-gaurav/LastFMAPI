@@ -49,7 +49,7 @@ public class AlbumInfo {
 		if(jsonData != null){
 			
 			DeserializeObject<AlbumWrapper> wrapperDeserializer = new DeserializeObject<>();
-			AlbumWrapper wrapper = wrapperDeserializer.deserealize(jsonData, AlbumWrapper.class);
+			AlbumWrapper wrapper = wrapperDeserializer.deserialize(jsonData, AlbumWrapper.class);
 			
 			return wrapper.getAlbum();
 		}

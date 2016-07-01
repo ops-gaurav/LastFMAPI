@@ -47,7 +47,7 @@ public class LastFMGeoTopArtists {
 		if (json != null) {
 			
 			DeserializeObject<GeoTopArtistWrapper> deserialize = new DeserializeObject<>();
-			GeoTopArtistWrapper topArtistWrapper = deserialize.deserealize(json, GeoTopArtistWrapper.class);
+			GeoTopArtistWrapper topArtistWrapper = deserialize.deserialize(json, GeoTopArtistWrapper.class);
 			
 			return topArtistWrapper.getArtists();
 		}

@@ -30,7 +30,7 @@ public class ArtistInfo {
 		String json = FetchJSON.fetchJSONFrom(genMethod);
 		if(json != null){
 			DeserializeObject<ArtistWrapper> artistWrapper = new DeserializeObject<>();
-			ArtistWrapper wrapper = artistWrapper.deserealize(json, ArtistWrapper.class);
+			ArtistWrapper wrapper = artistWrapper.deserialize(json, ArtistWrapper.class);
 			return wrapper.getArtist();
 		}
 		return null;
